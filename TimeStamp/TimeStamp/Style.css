@@ -1,0 +1,43 @@
+﻿body {
+            background-color: lightblue;
+            font-family: 'Trebuchet MS', sans-serif;
+        }
+        #title {
+            text-align:center;
+            margin-top:3%;
+            margin-bottom:4%;
+        }
+        #forms {
+            width: 550px;
+            margin: 0 auto;
+        }
+        .files {      
+            background-color:#fff;
+            border: 1px solid #ddd;
+            border-radius:5px;
+            display:inline-block;
+            padding:3px 40px 3px 3px;
+            position:relative;
+            width: auto;
+        }
+       input#file-upload-button {
+           color:green;
+        }
+        .buttons {
+            background-color: #425F9C;
+            border: none;
+            border-radius: 3px;
+            color: #FFF;
+            cursor:pointer;
+            display: inline-block;
+            height: 30px;
+            margin-right:15px;
+            width: auto;
+            padding:0 20px;
+            box-sizing: content-box;
+            width: 120px;
+        }
+        .formUpload {
+           border: 1px solid black;
+           padding: 20px;
+        }

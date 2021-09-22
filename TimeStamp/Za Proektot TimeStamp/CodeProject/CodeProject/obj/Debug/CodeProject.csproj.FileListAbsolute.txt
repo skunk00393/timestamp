@@ -1,0 +1,12 @@
+c:\users\sony-vaio\documents\visual studio 2013\Projects\CodeProject\CodeProject\bin\CodeProject.dll.config
+c:\users\sony-vaio\documents\visual studio 2013\Projects\CodeProject\CodeProject\bin\CodeProject.dll
+c:\users\sony-vaio\documents\visual studio 2013\Projects\CodeProject\CodeProject\bin\CodeProject.pdb
+c:\users\sony-vaio\documents\visual studio 2013\Projects\CodeProject\CodeProject\obj\Debug\CodeProject.dll
+c:\users\sony-vaio\documents\visual studio 2013\Projects\CodeProject\CodeProject\obj\Debug\CodeProject.pdb
+c:\users\sony-vaio\documents\visual studio 2013\Projects\CodeProject\CodeProject\obj\Debug\CodeProject.csprojResolveAssemblyReference.cache
+C:\Users\Borce\Desktop\CodeProject\CodeProject\bin\CodeProject.dll.config
+C:\Users\Borce\Desktop\CodeProject\CodeProject\bin\CodeProject.dll
+C:\Users\Borce\Desktop\CodeProject\CodeProject\bin\CodeProject.pdb
+C:\Users\Borce\Desktop\CodeProject\CodeProject\obj\Debug\CodeProject.csprojResolveAssemblyReference.cache
+C:\Users\Borce\Desktop\CodeProject\CodeProject\obj\Debug\CodeProject.dll
+C:\Users\Borce\Desktop\CodeProject\CodeProject\obj\Debug\CodeProject.pdb

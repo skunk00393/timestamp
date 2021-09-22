@@ -1,0 +1,110 @@
+protected void btnUploadFile_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine(a);
+            string path = Path.GetFullPath(FileUpload.PostedFile.FileName);
+            FileInfo file = new FileInfo(path);
+            DateTime lastModifiedDate = file.LastWriteTime;
+            //HttpPostedFile postedFile = FileUpload.PostedFile;
+            //string fileName = Path.GetFileName(postedFile.FileName);
+
+            //DateTime creationTime = File.GetCreationTime(FileUpload.FileName);
+            //DateTime creationTime = File.GetCreationTime(FileUpload.PostedFile.FileName);
+
+
+
+            string savePath = Server.MapPath("~/App_Data/");
+            //string fileName = Path.GetFileName(this.FileUpload.FileName);
+            //string fullFilePath = fileBasePath + fileName;
+
+
+            // Before attempting to save the file, verify
+            // that the FileUpload control contains a file.
+            //if (FileUpload.HasFile)
+            //    // Call a helper method routine to save the file.
+            //    SaveFile(FileUpload.PostedFile);
+            //else
+            //    // Notify the user that a file was not uploaded.
+            //   UploadStatusLabel.Text = "You did not specify a file to upload.";
+        }
+
+        //void SaveFile(HttpPostedFile file)
+        //{
+        //    string savePath = Server.MapPath("~/App_Data/");
+        //    // Specify the path to save the uploaded file to.
+        //    //string savePath = "c:\\temp\\uploads\\";
+
+        //    // Get the name of the file to upload.
+        //    string fileName = FileUpload.FileName;
+
+        //    // Create the path and file name to check for duplicates.
+        //    string pathToCheck = savePath + fileName;
+
+        //    // Create a temporary file name to use for checking duplicates.
+        //    string tempfileName = "";
+
+        //    // Check to see if a file already exists with the
+        //    // same name as the file to upload.        
+        //    if (System.IO.File.Exists(pathToCheck))
+        //    {
+        //        int counter = 2;
+        //        while (System.IO.File.Exists(pathToCheck))
+        //        {
+        //            // if a file with this name already exists,
+        //            // prefix the filename with a number.
+        //            tempfileName = counter.ToString() + fileName;
+        //            pathToCheck = savePath + tempfileName;
+        //            counter++;
+        //        }
+
+        //        fileName = tempfileName;
+
+        //        // Notify the user that the file name was changed.
+        //        UploadStatusLabel.Text = "A file with the same name already exists." +
+        //            "<br />Your file was saved as " + fileName;
+        //    }
+        //    else
+        //    {
+        //        // Notify the user that the file was saved successfully.
+        //        UploadStatusLabel.Text = "Your file was uploaded successfully.";
+        //    }
+
+        //    // Append the name of the file to upload to the path.
+        //    savePath += fileName;
+
+        //    // Call the SaveAs method to save the uploaded
+        //    // file to the specified directory.
+        //    FileUpload.SaveAs(savePath);
+
+
+
+        //    ////FileInfo info = new FileInfo(fileName);
+
+        //    //Stream stream = postedFile.InputStream;
+        //    //BinaryReader bReader = new BinaryReader(stream);
+        //    //byte[] bytes = bReader.ReadBytes((int)stream.Length);
+
+        //    //string conStr = ConfigurationManager.ConnectionStrings["RegistrationConnectionString"].ConnectionString;
+        //    //using (SqlConnection con = new SqlConnection(conStr))
+        //    //{
+        //    //    SqlCommand cmd = new SqlCommand("spUploadFile", con);
+        //    //    cmd.CommandType = CommandType.StoredProcedure;
+
+        //    //    cmd.Parameters.Add(new SqlParameter("@Name", SqlDbType.NVarChar));
+        //    //    cmd.Parameters["@Name"].Value = (fileName);
+        //    //    cmd.Parameters.Add(new SqlParameter("@FileData", SqlDbType.VarBinary));
+        //    //    cmd.Parameters["@FileData"].Value = (bytes);
+
+        //    //    con.Open();
+        //    //    cmd.ExecuteNonQuery();
+        //    //    con.Close();
+
+        //    //    lblMsg.Visible = true;
+        //    //    lblMsg.ForeColor = System.Drawing.Color.Green;
+        //    //    lblMsg.Text = "Документот е успешно прикачен!"; 
+
+        //    //}
+
+        //}
+
+
+File {name: "Jenkins on AWS.docx", lastModified: 1628611486657, lastModifiedDate: Tue Aug 10 2021 18:04:46 GMT+0200 (Central European Summer Time), webkitRelativePath: "", size: 449807, …}

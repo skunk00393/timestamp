@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Sofiene Rabhi - Tunidrone (http://www.tunidrone.com)</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    function loadJsonData() {
+        var postdata = JSON.stringify(
+            {
+                "From": document.getElementById("TxtFrom").value,
+                "To": document.getElementById("TxtTo").value,
+                "Body": document.getElementById("TxtBody").value
+            });
+            try {
+                $.ajax({
+                    type: "POST",
+                    url: "MailHandler.ashx",
+                    cache: false,
+                    data: postdata,
+                    dataType: "json",
+                    success: getSuccess,
+                    error: getFail
+                });
+            } catch (e) {
+                alert(e);
+            }
+            function getSuccess(data, textStatus, jqXHR) {
+                alert(data.Response);
+        };
+            function getFail(jqXHR, textStatus, errorThrown) {
+                alert(jqXHR.status);
+        };
+    };
+    </script>
+    </head>    
+<body>
+    <label id="From" />How to send Data from JavaScript to C# Handler<br /> 
+    <table>
+        <tr>
+            <td><label id="From"/>From : </td>
+            <td><input id="TxtFrom"></td>
+        </tr>
+        <tr>
+            <td><label id="To"/>To : </td>
+            <td><input id="TxtTo" required="required"></td>
+        </tr>
+        <tr>
+            <td><label id="To" />Body : </td>
+            <td><textarea id="TxtBody" required="required" rows="10" cols="30"></textarea></td>
+        </tr>
+        <tr>
+            <td/>
+            <td style="align-content:flex-end">
+                <button onclick="loadJsonData();">Send Data to the Server</button>
+            </td>
+        </tr>
+    </table>       
+</body>
+</html>

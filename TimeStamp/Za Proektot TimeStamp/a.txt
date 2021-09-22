@@ -1,0 +1,90 @@
+67f4a4c73e734033ed921afb02f451c0
+67f4a4c73e734033ed921afb02f451c0
+67f4a4c73e734033ed921afb02f451c0
+
+
+dd1d61bf4aab835521195d86fb5dbf7d
+
+
+
+
+
+
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="TimeStamp.Index" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <title></title>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript">
+   
+        function getFileInfo() {
+
+
+
+            var fileInput = document.getElementById("FileUpload");
+
+            // files is a FileList object (similar to NodeList)
+            var files = fileInput.files;
+
+            // object for allowed media types
+          
+
+          
+
+           //fileInput is a HTMLInputElement: <input type="file" multiple id="myfileinput"> 
+          
+           // files is a FileList object (simliar to NodeList) 
+           var files = fileInput.files;
+           var fileLastModifiedDate = files[0].lastModifiedDate;
+           var filename = files[0].name;
+
+           var postdata = JSON.stringify(
+         {
+           "Name": filename,
+           "FileDataBinary": "",
+           "ModifiedDate": fileLastModifiedDate
+         });
+           try {
+               $.ajax({
+                   type: "POST",
+                   url: "FileHandler.ashx",
+                   cache: false,
+                   data: postdata,
+                   dataType: "json",
+                   success: getSuccess,
+                   error: getFail
+               });
+           } catch (e) {
+               alert(e);
+           }
+           function getSuccess(data, textStatus, jqXHR) {
+               alert(data.Response);
+           };
+           function getFail(jqXHR, textStatus, errorThrown) {
+               alert(jqXHR.status);
+           };
+
+       }
+
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:FileUpload ID="FileUpload" runat="server" />
+        <br />
+        <br />
+        <asp:Button ID="btnUploadFile" runat="server" OnClientClick="getFileInfo()" Text="Прикачи документ" />
+        <br />
+        <br />
+        <asp:Label ID="lblMsg" runat="server"></asp:Label>
+        <asp:Label ID="UploadStatusLabel" runat="server"></asp:Label>
+    
+    </div>
+    </form>
+</body>
+</html>
